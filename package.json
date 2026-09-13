@@ -3,24 +3,46 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "eslint"
+    "dev": "node scripts/run.mjs",
+    "build": "tsc -p server/tsconfig.json && next build",
+    "start": "node scripts/run.mjs --production",
+    "lint": "eslint",
+    "test": "tsc -p server/tsconfig.json && node --test tests/*.test.cjs"
   },
   "dependencies": {
+    "@nestjs/common": "12.0.1",
+    "@nestjs/core": "12.0.1",
+    "@nestjs/platform-express": "12.0.1",
+    "@supabase/supabase-js": "2.116.0",
+    "@xyflow/react": "12.11.6",
+    "cheerio": "1.2.0",
+    "dotenv": "17.4.2",
+    "helmet": "8.3.0",
+    "ipaddr.js": "2.5.0",
+    "lucide-react": "1.45.0",
     "next": "16.3.5",
     "react": "19.2.8",
-    "react-dom": "19.2.8"
+    "react-dom": "19.2.8",
+    "reflect-metadata": "0.2.2",
+    "rxjs": "7.8.2",
+    "zod": "4.6.2"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4",
-    "@types/node": "^20",
+    "@types/express": "5.0.6",
+    "@types/node": "22.20.2",
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "eslint": "^9",
     "eslint-config-next": "16.3.5",
+    "prettier": "3.9.6",
     "tailwindcss": "^4",
     "typescript": "^5"
+  },
+  "overrides": {
+    "multer": "^2.3.0"
+  },
+  "engines": {
+    "node": ">=22.13.0"
   }
 }
