@@ -215,26 +215,7 @@ export function SourceSettings({ api }: { api: Api }) {
           </details>
         </section>
       </div>
-      <section className="panel source-note">
-        <ShieldCheck size={22} />
-        <div>
-          <h3>Sobre o Mercado Livre</h3>
-          <p>
-            Não encontramos documentação pública de uma API de afiliados
-            equivalente à da Shopee. O aplicativo aceita um feed autorizado com
-            links já comissionados. Não usa cookies privados, não burla
-            bloqueios e não transforma links comuns em links afiliados
-            inventando parâmetros.
-          </p>
-          <a
-            href="https://www.mercadolivre.com.br/l/afiliados-gere-seus-links"
-            target="_blank"
-            rel="noreferrer"
-          >
-            Como o Mercado Livre gera links de afiliado
-          </a>
-        </div>
-      </section>
+
     </div>
   );
 }
